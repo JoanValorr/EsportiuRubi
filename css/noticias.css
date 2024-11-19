@@ -1,5 +1,5 @@
 /* Estilo para h2 con gradiente dinámico solo para "Noticias destacadas" */
-.noticias-destacadas{
+.noticias-destacadas {
     font-size: 2.5rem; /* Tamaño grande para destacar */
     font-weight: bold;
     text-transform: uppercase; /* Todo en mayúsculas */
@@ -48,17 +48,16 @@
     }
 }
 
-
 /* Sección de todas las noticias */
 .all-news {
     padding: 40px 20px;
     max-width: 1000px;
     margin: 30px auto;
-    background-color: #FDECEC; /* Fondo blanco con transparencia */
+    background-color: #FDECEC; /* Fondo suave */
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Fondo blanco */
 }
-
 
 /* Contenedor de todas las noticias */
 #todas-las-noticias {
@@ -76,6 +75,7 @@
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Asegura que los bordes no sobresalgan */
 }
 
 /* Efecto hover para las noticias */
@@ -89,18 +89,22 @@
     font-size: 1.8em;
     color: #8B0000; /* Rojo oscuro */
     margin-bottom: 10px;
+    font-weight: 500; /* Para un toque más delicado */
 }
 
 /* Contenido de la noticia */
 .noticia p {
     color: #555;
     line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
 .noticia p small {
     display: block;
     margin-top: 10px;
     color: #888; /* Fecha en gris */
+    font-size: 0.9rem;
 }
 
 /* Móviles y tabletas */
@@ -115,5 +119,9 @@
 
     .noticia h3 {
         font-size: 1.5em;
+    }
+
+    .noticia p {
+        font-size: 0.95rem;
     }
 }
