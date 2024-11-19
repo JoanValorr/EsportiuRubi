@@ -1,0 +1,107 @@
+
+h2 {
+    font-size: 2.5rem; /* Tamaño grande para destacar */
+    font-weight: bold;
+    text-transform: uppercase; /* Todo en mayúsculas */
+    text-align: center;
+    background: linear-gradient(90deg, #B22222, #FF6347, #FFD700); /* Gradiente dinámico */
+    background-clip: text; /* El gradiente se aplica al texto */
+    -webkit-background-clip: text; /* Compatibilidad con Safari */
+    color: transparent; /* Elimina el color sólido para mostrar el gradiente */
+    letter-spacing: 3px; /* Espaciado entre letras */
+    margin: 20px 0;
+    position: relative; /* Para añadir pseudo-elementos animados */
+
+    /* Animación del gradiente */
+    animation: gradient-move 3s infinite linear;
+}
+
+/* Efecto de pseudo-elemento decorativo */
+h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #FFD700, #FF6347, #B22222);
+    animation: line-glow 2s infinite ease-in-out;
+    border-radius: 5px;
+}
+
+/* Animación del gradiente del texto */
+@keyframes gradient-move {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+/* Animación del pseudo-elemento decorativo */
+@keyframes line-glow {
+    0%, 100% {
+        width: 50%;
+    }
+    50% {
+        width: 80%;
+    }
+}
+/* Estilo específico para la página de galería */
+.gallery-section {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-section h3 {
+    color: #B22222;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.gallery-section img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 3px solid #B22222;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-videos{
+    margin: 60px 0 20px 0; /* 200px arriba, 20px abajo */
+
+}
+/* galeria.css */
+.video-section {
+    display: flex; /* Coloca los videos en línea */
+    flex-wrap: wrap; /* Permite que los videos salten a la siguiente fila */
+    justify-content: center; /* Centra los videos */
+    gap: 20px; /* Espacio entre videos */
+}
+
+
+.video-section video {
+    width: 400px; /* Ancho uniforme */
+    height: 400px; /* Alto uniforme */
+    object-fit: cover; /* Ajusta el contenido sin deformarlo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para estética */
+    transition: transform 0.3s; /* Suaviza la interacción */
+}
+
+.video-section video:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+

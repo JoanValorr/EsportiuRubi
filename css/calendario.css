@@ -1,0 +1,140 @@
+/* SECCIÓN PRINCIPAL */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(90deg, #B22222, #FF6347, #FFD700);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 3px;
+    margin: 20px 0;
+    position: relative;
+    animation: gradient-move 3s infinite linear;
+}
+
+/* Efecto de pseudo-elemento decorativo */
+h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #FFD700, #FF6347, #B22222);
+    animation: line-glow 2s infinite ease-in-out;
+    border-radius: 5px;
+}
+
+/* Animaciones */
+@keyframes gradient-move {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+@keyframes line-glow {
+    0%, 100% {
+        width: 50%;
+    }
+    50% {
+        width: 80%;
+    }
+}
+
+/* CALENDARIO */
+#partidos-list {
+    margin-top: 500px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.calendar-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #8B1E1E;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.calendar-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+.calendar-item em {
+    font-size: 14px;
+    color: #8B1E1E;
+    font-style: normal;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Estilo para el borde de victoria (verde) */
+.victoria {
+    border-left: 10px solid green;
+}
+
+/* Estilo para el borde de derrota (rojo) */
+.derrota {
+    border-left: 10px solid red;
+}
+
+/* Estilo para el borde de empate (amarillo) */
+.empate {
+    border-left: 10px solid yellow;
+}
+/* Estilo para el borde de partido no jugado (gris) */
+.no-jugado {
+    border-left: 10px solid gray;
+}
+
+/* FOOTER */
+footer {
+    background-color: #8B1E1E;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #FFD700;
+}

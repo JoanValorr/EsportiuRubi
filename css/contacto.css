@@ -1,0 +1,133 @@
+h3 {
+    font-size: 2.5rem; /* Tamaño grande para destacar */
+    font-weight: bold;
+    text-transform: uppercase; /* Todo en mayúsculas */
+    text-align: center;
+    background: linear-gradient(90deg, #B22222, #FF6347, #FFD700); /* Gradiente dinámico */
+    background-clip: text; /* El gradiente se aplica al texto */
+    -webkit-background-clip: text; /* Compatibilidad con Safari */
+    color: transparent; /* Elimina el color sólido para mostrar el gradiente */
+    letter-spacing: 3px; /* Espaciado entre letras */
+    margin: 20px 0;
+    position: relative; /* Para añadir pseudo-elementos animados */
+
+    /* Animación del gradiente */
+    animation: gradient-move 3s infinite linear;
+}
+
+/* Efecto de pseudo-elemento decorativo */
+h3::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #FFD700, #FF6347, #B22222);
+    animation: line-glow 2s infinite ease-in-out;
+    border-radius: 5px;
+}
+
+/* Animación del gradiente del texto */
+@keyframes gradient-move {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+/* Animación del pseudo-elemento decorativo */
+@keyframes line-glow {
+    0%, 100% {
+        width: 50%;
+    }
+    50% {
+        width: 80%;
+    }
+}
+
+/* Contact section */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+/* Estilo para la imagen */
+.contact-image {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-image img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo para el formulario */
+.contact-form {
+    flex: 2;
+}
+
+.contact-form h3 {
+    color: #B22222;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #B22222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #FF6347;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #B22222;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+}

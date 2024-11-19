@@ -1,0 +1,244 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FDECEC; /* Fondo claro con tono rosado */
+    color: #641B1B; /* Rojo oscuro */
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Encabezado */
+header {
+    background: #8B1E1E; /* Rojo oscuro */
+    color: #FFF5F5;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Animación de palpitación para la imagen */
+header img {
+    height: 50px;
+    animation: pulsar 1.5s ease-in-out infinite; /* Aplica la animación de palpitación */
+}
+
+/* Definir la animación de palpitación */
+@keyframes pulsar {
+    0% {
+        transform: scale(1);  /* Comienza en su tamaño original */
+    }
+    50% {
+        transform: scale(1.05);  /* Aumenta ligeramente */
+    }
+    100% {
+        transform: scale(1);  /* Vuelve al tamaño original */
+    }
+}
+
+
+header h1 {
+    font-size: 1.6rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #FFE4E4; /* Rosa claro */
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #641B1B; /* Rojo más oscuro */
+    color: #FFD6D6; /* Rosa anaranjado */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, #8B1E1E, #B22222); /* Degradado rojizo */
+    color: #FFE4E4;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background-color: #641B1B;
+    color: #FFE4E4;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #FFD6D6;
+    transform: scale(1.05);
+    color: #641B1B;
+}
+
+/* Noticias Destacadas */
+.news-highlight {
+    margin: 40px auto;
+    padding: 40px 40px;
+    background: #FFE4E4;
+    border: 2px solid #8B1E1E;
+    border-radius: 12px;
+    max-width: 1000px;
+    text-align: center; /* Centrar todo el contenido */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-highlight h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #641B1B;
+    text-transform: uppercase;
+}
+
+/* Contenedor de noticias */
+.news-highlight div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Centrar las tarjetas en el contenedor */
+}
+
+/* Estilo de las noticias individuales */
+.noticia {
+    background: #FFE4E4;
+    border: 1px solid #8B1E1E;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Centrar el texto dentro de la tarjeta */
+}
+
+.noticia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del título de la noticia */
+.noticia h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #8B1E1E;
+}
+
+/* Estilo del texto de la noticia */
+.noticia p {
+    font-size: 0.95rem;
+    color: #641B1B;
+    margin: 0 auto; /* Asegura el centrado horizontal */
+}
+
+/* Footer */
+footer {
+    background: #8B1E1E;
+    color: #FFE4E4;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #FFD6D6;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #FFE4E4;
+}
+
+/* Botones Globales */
+button {
+    background-color: #8B1E1E;
+    color: #FFE4E4;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFD6D6;
+    color: #641B1B;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .news-highlight h3 {
+        font-size: 1.6rem;
+    }
+
+    .noticia h2 {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        gap: 10px;
+    }
+}

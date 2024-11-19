@@ -1,0 +1,119 @@
+/* Estilo para h2 con gradiente dinámico solo para "Noticias destacadas" */
+.noticias-destacadas{
+    font-size: 2.5rem; /* Tamaño grande para destacar */
+    font-weight: bold;
+    text-transform: uppercase; /* Todo en mayúsculas */
+    text-align: center;
+    background: linear-gradient(90deg, #B22222, #FF6347, #FFD700); /* Gradiente dinámico */
+    background-clip: text; /* El gradiente se aplica al texto */
+    -webkit-background-clip: text; /* Compatibilidad con Safari */
+    color: transparent; /* Elimina el color sólido para mostrar el gradiente */
+    letter-spacing: 3px; /* Espaciado entre letras */
+    margin: 20px 0;
+    position: relative; /* Para añadir pseudo-elementos animados */
+    animation: gradient-move 3s infinite linear;
+}
+
+/* Efecto de pseudo-elemento decorativo para "Noticias destacadas" */
+.noticias-destacadas::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #FFD700, #FF6347, #B22222);
+    animation: line-glow 2s infinite ease-in-out;
+    border-radius: 5px;
+}
+
+/* Animación del gradiente del texto */
+@keyframes gradient-move {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+/* Animación del pseudo-elemento decorativo */
+@keyframes line-glow {
+    0%, 100% {
+        width: 50%;
+    }
+    50% {
+        width: 80%;
+    }
+}
+
+
+/* Sección de todas las noticias */
+.all-news {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: #FDECEC; /* Fondo blanco con transparencia */
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Contenedor de todas las noticias */
+#todas-las-noticias {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas grandes */
+    gap: 20px;
+    padding: 0;
+}
+
+/* Noticias individuales */
+.noticia {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para las noticias */
+.noticia:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Título de la noticia */
+.noticia h3 {
+    font-size: 1.8em;
+    color: #8B0000; /* Rojo oscuro */
+    margin-bottom: 10px;
+}
+
+/* Contenido de la noticia */
+.noticia p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.noticia p small {
+    display: block;
+    margin-top: 10px;
+    color: #888; /* Fecha en gris */
+}
+
+/* Móviles y tabletas */
+@media (max-width: 768px) {
+    #todas-las-noticias {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .all-news h2 {
+        font-size: 2em;
+    }
+
+    .noticia h3 {
+        font-size: 1.5em;
+    }
+}
