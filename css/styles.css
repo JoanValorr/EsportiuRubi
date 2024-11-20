@@ -31,11 +31,12 @@ header {
     padding: 15px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Título/logo a la izquierda y nav a la derecha */
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 15px;
 }
 /* Animación de palpitación para la imagen */
 header img {
@@ -59,16 +60,15 @@ header img {
 
 header h1 {
     font-size: 1.6rem;
-    margin: 0;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin: 0; /* Elimina cualquier margen extra */
 }
-
 nav {
     display: flex;
-    gap: 15px;
+    gap: 15px; /* Espaciado entre los elementos del menú */
+    margin-left: auto; /* Empuja el nav hacia la derecha */
 }
-
 nav a {
     color: #FFE4E4; /* Rosa claro */
     font-weight: bold;
@@ -80,6 +80,45 @@ nav a {
 nav a:hover {
     background-color: #641B1B; /* Rojo más oscuro */
     color: #FFD6D6; /* Rosa anaranjado */
+}
+
+/* Ícono hamburguesa */
+#menu-toggle {
+    display: none; /* Oculto por defecto */
+    background: none;
+    border: none;
+    font-size: 1.5rem; /* Tamaño del ícono */
+    color: #FFF5F5;
+    cursor: pointer;
+    z-index: 1100; /* Más alto que el menú */
+}
+
+/* Estilo para mostrar el menú hamburguesa en móviles */
+@media (max-width: 790px) {
+    #menu-toggle {
+        display: block; /* Visible solo en pantallas pequeñas */
+    }
+
+    nav {
+        display: none; /* Esconde el menú inicialmente */
+        flex-direction: column; /* Alinea enlaces verticalmente */
+        gap: 10px;
+        position: absolute; /* Menú flotante */
+        top: 60px; /* Justo debajo del header */
+        right: 20px;
+        background: #8B1E1E;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+        color: #FFE4E4;
+    }
+
+    nav.show {
+        display: flex; /* Muestra el menú cuando está activo */
+    }
 }
 
 /* Hero Section */
