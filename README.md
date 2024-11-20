@@ -18,6 +18,43 @@ Estilo único: Colores representativos del Esportiu Rubí FS con un toque elegan
 🎯 Objetivo<br>El objetivo de esta página es acercar a nuestros seguidores, jugadores y simpatizantes a todo lo relacionado con el Esportiu Rubí FS Senior A. Queremos mantenernos conectados con nuestra comunidad, ofreciendo información relevante y actualizada para todos los interesados. 🙋‍♂️🙋‍♀️<br><br>🚀 Desarrollo<br>Esta web ha sido desarrollada con HTML, CSS y JavaScript para garantizar una experiencia de usuario rápida y fluida. 👨‍💻👩‍💻<br><br>
 
 📂 Estructura del Proyecto:
+```
+/Esportiu Rubí
+│
+├── /css
+│   ├── calendario.css            # Estilos específicos para la sección de calendario
+│   ├── contacto.css             # Estilos específicos para la sección de contacto
+│   ├── equipo.css               # Estilos específicos para la sección de equipo
+│   ├── galeria.css              # Estilos específicos para la sección de galería
+│   ├── noticias.css             # Estilos específicos para la sección de noticias
+│   └── styles.css               # Estilos generales para la web
+│
+├── /js
+│   ├── script.js                # Funcionalidades generales de la web
+│   ├── noticias.js              # Funciones específicas para la sección de noticias
+│   └── menu.js                  # Funciones específicas para el menú desplegable
+│
+├── /img
+│   └── All Images               # Carpeta que contiene todas las imágenes utilizadas en la web
+│
+├── /json
+│   └── noticias.json            # Archivo JSON con los datos de las noticias
+│
+├── /php
+│   └── enviar_contacto.php      # Archivo PHP para enviar el formulario de contacto
+│
+├── /uploads
+│   └── All videos               # Carpeta que contiene todos los videos subidos
+│
+├── /calendario.html             # Página HTML para mostrar el calendario
+├── /contacto.html               # Página HTML para la sección de contacto
+├── /equipo.html                 # Página HTML para mostrar el equipo
+├── /galeria.html                # Página HTML para la galería de imágenes
+├── /noticias.html               # Página HTML para mostrar las noticias
+├── /styles.html                 # Página HTML para los estilos de la web (si la necesitas para algo en particular)
+└── /index.html                   # Página principal de la web (si es PHP o HTML)
+      
+```
 
 
 
