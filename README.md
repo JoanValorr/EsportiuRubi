@@ -55,7 +55,7 @@ Estilo único: Colores representativos del Esportiu Rubí FS con un toque elegan
 └── /index.html                   # Página principal de la web (si es PHP o HTML)
       
 ```
-
+[WEB ESPORTIU RUBI SENIOR MASC](https://seniorfutsal.netlify.app)
 
 
 
