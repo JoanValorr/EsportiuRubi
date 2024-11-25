@@ -17,7 +17,7 @@ async function cargarUltimasNoticias() {
                     <p><small>${noticia.fecha}</small></p>
                     <p>${noticia.contenido}</p>
                 `;
-                contenedorNoticias.appendChild(noticiaDiv);
+                contenedorNoticias.prepend(noticiaDiv); // Usar prepend en lugar de appendChild
             });
         }
     } catch (error) {
@@ -43,7 +43,7 @@ async function cargarTodasLasNoticias() {
                     <p><small>${noticia.fecha}</small></p>
                     <p>${noticia.contenido}</p>
                 `;
-                contenedorTodasLasNoticias.appendChild(noticiaDiv);
+                contenedorTodasLasNoticias.prepend(noticiaDiv); // Usar prepend en lugar de appendChild
             });
         }
     } catch (error) {

@@ -13,7 +13,7 @@ const partidos = [
 
     { fecha: "16-11-2024", equipo: "Rubi CEFS", rival: "Sant Quirze", hora: "19:00", resultado: "Derrota 2-7" },
 
-    { fecha: "24-11-2024", equipo: "Malgrat", rival: "Rubi CEFS", hora: "17:45", resultado: "No Jugado" },
+    { fecha: "24-11-2024", equipo: "Malgrat", rival: "Rubi CEFS", hora: "17:45", resultado: "Victoria 0-5" },
 
     { fecha: "30-11-2024", equipo: "Rubi CEFS", rival: "Espanyol", hora: "17:45", resultado: "No Jugado" },
     
