@@ -15,13 +15,13 @@ const partidos = [
 
     { fecha: "24-11-2024", equipo: "Malgrat", rival: "Rubi CEFS", hora: "17:45", resultado: "Victoria 0-5" },
 
-    { fecha: "30-11-2024", equipo: "Rubi CEFS", rival: "Espanyol", hora: "17:45", resultado: "No Jugado" },
+    { fecha: "30-11-2024", equipo: "Rubi CEFS", rival: "Espanyol", hora: "17:45", resultado: "Victoria 8-4 " },
     
-    { fecha: "14-12-2024", equipo: "Arenys de munt", rival: "Rubi CEFS", hora: "18:00", resultado: "No Jugado" },
+    { fecha: "14-12-2024", equipo: "Arenys de munt", rival: "Rubi CEFS", hora: "18:00", resultado: "Victoria 3-4" },
 
-    { fecha: "21-12-2024", equipo: "Rubi CEFS", rival: "Montornes", hora: "17:45", resultado: "No Jugado" },
+    { fecha: "21-12-2024", equipo: "Rubi CEFS", rival: "Montornes", hora: "17:45", resultado: "Victoria 8-4" },
 
-    { fecha: "11-01-2025", equipo: "Olimpic Floresta", rival: "Rubi CEFS", hora: "18:00", resultado: "No Jugado" },
+    { fecha: "11-01-2025", equipo: "Olimpic Floresta", rival: "Rubi CEFS", hora: "18:00", resultado: "Derrota 8-3" },
 
     { fecha: "18-01-2025", equipo: "Rubi CEFS", rival: "Girona", hora: "17:45", resultado: "No Jugado" },
 
