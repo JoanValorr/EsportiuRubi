@@ -5,7 +5,7 @@ async function cargarUltimasNoticias() {
         if (!response.ok) throw new Error('No se pudo cargar el archivo JSON');
 
         const noticias = await response.json();
-        const ultimasNoticias = noticias.slice(-5); // Últimas 5 noticias
+        const ultimasNoticias = noticias.slice(-6); // Últimas 5 noticias
         const contenedorNoticias = document.getElementById('noticias');
         if (contenedorNoticias) {
             contenedorNoticias.innerHTML = '';
