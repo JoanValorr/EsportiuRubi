@@ -23,7 +23,7 @@ const partidos = [
 
     { fecha: "11-01-2025", equipo: "Olimpic Floresta", rival: "Rubi CEFS", hora: "18:00", resultado: "Derrota 8-3" },
 
-    { fecha: "18-01-2025", equipo: "Rubi CEFS", rival: "Girona", hora: "17:45", resultado: "No Jugado" },
+    { fecha: "18-01-2025", equipo: "Rubi CEFS", rival: "Girona", hora: "18:30", resultado: "Empate 4-4" },
 
     { fecha: "25-01-2025", equipo: "Vilasar", rival: "Rubi CEFS", hora: "17:45", resultado: "No Jugado" },
 
